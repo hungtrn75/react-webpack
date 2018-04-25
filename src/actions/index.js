@@ -66,9 +66,11 @@ export const actGetProduct = product => {
 }
 
 export const actUpdateProductReq = product => {
-    return async dispatch => {
-        let res = await callApi(`products/${product.id}`, 'PUT', product);
-        return dispatch(actUpdateProduct(res.data));
+    return dispatch => {
+        callApi(`products/${product.id}`, 'PUT', product).then(res => {
+            dispatch(actUpdateProduct(res.data));
+        });
+
     }
 }
 
