@@ -14,6 +14,18 @@ const VENDOR_LIBS = [
     'redux-thunk'
 ]
 
+const devServer = {
+    port: 4000,
+    open: true,
+    disableHostCheck: true,
+    historyApiFallback: true,
+    overlay: true,
+    stats: 'minimal',
+    inline: true,
+    compress: true,
+    contentBase: path.join(__dirname, 'dist')
+}
+
 module.exports = {
     mode: 'production',
     entry: {
@@ -61,5 +73,9 @@ module.exports = {
                 }
             }
         }
-    }
+    },
+    performance: {
+        hints: false
+    },
+    devServer
 };
