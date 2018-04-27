@@ -22,6 +22,7 @@ class App extends Component {
 
   showContentMenus = routes => {
     let result = null;
+    console.log(routes.main);
     if (routes.length > 0) {
       result = routes.map((route, index) => {
         return (<Route
