@@ -1,9 +1,14 @@
 import React from 'react';
-import HomePage from './pages/HomePage/HomePage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
-import ProductListPage from './pages/ProductListPage/ProductListPage';
-import ProductActionPage from './pages/ProductActionPage/ProductActionPage';
-console.log('routes');
+import asyncComponent from './AsyncComponent.js';
+import Loadable from 'react-loadable';
+import { HomePage, ProductListPage, ProductActionPage } from './LoadableComponent';
+
+//@Dynamic Imports
+
+//const HomePage = asyncComponent(() => import('./pages/HomePage/HomePage').then(module => module.default));
+//const ProductListPage = asyncComponent(() => import('./pages/ProductListPage/ProductListPage').then(module => module.default));
+//const ProductActionPage = asyncComponent(() => import('./pages/ProductActionPage/ProductActionPage').then(module => module.default));
 
 const routes = [
     {

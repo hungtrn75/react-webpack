@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import Menu from './../Menu/Menu';
 import routes from './../../routes';
-import { BrowserRouter as Router, Route, Switch,HashRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, HashRouter } from 'react-router-dom';
+import Loadable from 'react-loadable';
 
 class App extends Component {
   render() {
     return (
       <HashRouter>
         <React.Fragment>
-          <Menu />
+          <Menu/>
           <div className="container">
             <div className="row">
               {this.showContentMenus(routes)}
