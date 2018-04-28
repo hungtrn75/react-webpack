@@ -27,7 +27,6 @@ const devServer = {
 }
 
 module.exports = {
-    mode: 'production',
     entry: {
         bundle: './src/index.js',
         vendor: VENDOR_LIBS
@@ -76,9 +75,6 @@ module.exports = {
                 }
             }
         }
-    },
-    node: {
-        process: true
     },
     devServer
 };
